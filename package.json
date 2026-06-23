@@ -1,0 +1,49 @@
+{
+  "name": "video-thumbnails-previewer",
+  "displayName": "Video Thumbnails Previewer",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.15.4",
+  "description": "Preview video thumbnails on supported websites.",
+  "author": "StarOldKui",
+  "license": "MIT",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "pnpm exec tsc --noEmit && pnpm build && pnpm test"
+  },
+  "dependencies": {
+    "@plasmohq/messaging": "^0.7.1",
+    "fflate": "0.8.2",
+    "plasmo": "0.90.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.17",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "typescript": "5.3.3",
+    "vitest": "2.1.9"
+  },
+  "manifest": {
+    "name": "Video Thumbnails Previewer",
+    "version": "1.0.0",
+    "description": "Preview video thumbnails on supported websites.",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "host_permissions": [
+      "*://*.recu.me/*",
+      "*://*.recu.club/*",
+      "*://*.missav.ws/*",
+      "*://*.missav.com/*",
+      "https://*.mediafront.club/*"
+    ]
+  }
+}
